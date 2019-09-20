@@ -80,19 +80,15 @@ public class AnimatorLineEditText extends AppCompatEditText {
 
     private void setFocus(){
         ValueAnimator animator = ValueAnimator.ofFloat(0, mWidth / 2);
-        animator.setDuration(200);
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                mProgress = (float) valueAnimator.getAnimatedValue();
-                postInvalidate();
-            }
-        });
-        animator.start();
+        startAnimatorAction(animator);
     }
 
     private void setUnFocus(){
         ValueAnimator animator = ValueAnimator.ofFloat(mWidth / 2, 0);
+        startAnimatorAction(animator);
+    }
+
+    private void startAnimatorAction(ValueAnimator animator) {
         animator.setDuration(200);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
