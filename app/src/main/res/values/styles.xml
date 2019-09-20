@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <declare-styleable name="AnimatorLineEditText">
+        <!--失去焦点底部横线的颜色-->
+        <attr name="defaultColor" format="color"/>
+        <!--获取焦点后 底部横线的颜色-->
+        <attr name="focusColor" format="color"/>
+        <!--失去焦点底部横线的 宽度-->
+        <attr name="defaultStrokeWidth" format="dimension"/>
+        <!--获取焦点底部横线的 宽度-->
+        <attr name="focusStrokeWidth" format="dimension"/>
+    </declare-styleable>
+
+</resources>
